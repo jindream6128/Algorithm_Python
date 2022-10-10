@@ -1,7 +1,7 @@
 T = int(input())
 for i in range(1, T+1):
     N = int(input())
-    N_list = list(map(int,input().split()))[::-1] #입력받은 배열을 거꿀로 만들어준다
+    N_list = list(map(int,input().split()))[::-1] #입력받은 배열을 거꾸로 만들어준다
     sum = max = 0 #최대값은 0으로, 합도 0으로 선언한다
     
     for j in N_list: #N_list만큼 반복을 돌린다 (index가 아닌 value)
