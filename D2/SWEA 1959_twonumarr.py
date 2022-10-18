@@ -26,21 +26,20 @@ for test_case in range(1, T+1):
     # ans값에는 sum 리스트의 max값을 저장한다.
     print(f'#{test_case} {ans}')
             
-# 같은 로직 나오는거 중복 지우기 수정중
-# T = int(input())
-# for test_case in range(1, T+1):
-#     N, M = map(int, input().split())
-#     arrA = list(map(int,input().split()))
-#     arrB = list(map(int,input().split()))
-#     sum = [0]*(M-N+1)
+# 같은 로직 나오는거 중복 지우기 
+T = int(input())
+for test_case in range(1, T+1):
+    N, M = map(int, input().split())
+    arrA = list(map(int,input().split()))
+    arrB = list(map(int,input().split()))
     
-#     # N과 M이 항상 N < M 이 될 수 있도록 해주자
-#     if N > M:
-#         arrA, arrB = arrB, arrA
-#         N, M = M, N
+    # N과 M이 항상 N < M 이 될 수 있도록 
+    if N > M:
+        arrA, arrB = arrB, arrA
+        N, M = M, N
         
-#     for i in range(0, M-N+1):
-#         for j in range(-1, -N-1, -1):
-#             sum[i] += arrA[j]*arrB[j-i]
-#     print(sum)
-#     print(f'#{test_case} {max(sum)}')           
+    sum = [0]*(M-N+1)
+    for i in range(0, M-N+1):
+        for j in range(-1, -N-1, -1):
+            sum[i] += arrA[j]*arrB[j-i]
+    print(f'#{test_case} {max(sum)}')     
