@@ -27,19 +27,19 @@ for test_case in range(1, T+1):
     print(f'#{test_case} {ans}')
             
 # 같은 로직 나오는거 중복 지우기 
-T = int(input())
-for test_case in range(1, T+1):
-    N, M = map(int, input().split())
-    arrA = list(map(int,input().split()))
-    arrB = list(map(int,input().split()))
+# T = int(input())
+# for test_case in range(1, T+1):
+#     N, M = map(int, input().split())
+#     arrA = list(map(int,input().split()))
+#     arrB = list(map(int,input().split()))
     
-    # N과 M이 항상 N < M 이 될 수 있도록 
-    if N > M:
-        arrA, arrB = arrB, arrA
-        N, M = M, N
+#     # N과 M이 항상 N < M 이 될 수 있도록 
+#     if N > M:
+#         arrA, arrB = arrB, arrA
+#         N, M = M, N
         
-    sum = [0]*(M-N+1)
-    for i in range(0, M-N+1):
-        for j in range(-1, -N-1, -1):
-            sum[i] += arrA[j]*arrB[j-i]
-    print(f'#{test_case} {max(sum)}')     
+#     sum = [0]*(M-N+1)
+#     for i in range(0, M-N+1):
+#         for j in range(-1, -N-1, -1):
+#             sum[i] += arrA[j]*arrB[j-i]
+#     print(f'#{test_case} {max(sum)}')     
