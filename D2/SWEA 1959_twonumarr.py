@@ -26,7 +26,7 @@
 #     # ans값에는 sum 리스트의 max값을 저장한다.
 #     print(f'#{test_case} {ans}')
             
-같은 로직 나오는거 중복 지우기 
+#같은 로직 나오는거 중복 지우기
 T = int(input())
 for test_case in range(1, T+1):
     N, M = map(int, input().split())
