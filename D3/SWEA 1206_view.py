@@ -20,4 +20,4 @@ for test_case in range(1, 11):
     #         ans = min(mid)
     #     else:
     #         pass
-    print(f'#{test_case} {ans}')
+    # print(f'#{test_case} {ans}')
