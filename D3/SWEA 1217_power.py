@@ -1,11 +1,10 @@
-# file input
-# import sys
-# sys.stdin = open("input.txt", "r")
-
-T = int(input())
-ans = 0
-for test_case in range(1, T+1):
-    a, b = map(int, input().split())
-    for _ in range(b):
+def power(a,n): # power (거듭제곱 함수 구현)
+    ans = 1
+    for _ in range(n):
         ans *= a
-    print(f'#{test_case} {ans}')
+    return ans
+
+for _ in range(10):
+    T = int(input())
+    a, n = map(int, input().split())
+    print(f'#{T} {power(a,n)}')
