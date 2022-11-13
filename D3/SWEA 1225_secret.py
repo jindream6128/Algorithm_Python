@@ -1,8 +1,21 @@
-# file input
-# import sys
-# sys.stdin = open("input.txt", "r")
+import sys
+sys.stdin = open("input.txt", "r")
 
-T = int(input())
+# 큐 자료구조
+def password(list):
+    while True:
+        for i in range(1,6): #
+            num = list.pop(0)
+            list.append(num - i)
 
-for test_case in range(1, T+1):
-    N =int(input())
+            if list[7] <= 0:
+                list[7] = 0
+                return list
+
+
+for tc in range(1,11):
+    _ = input()
+    lst = list(map(int,input().split()))
+
+    result = password(lst)
+    print(f'#{tc}', *result)
