@@ -17,9 +17,8 @@ for tc in range(1,T+1):
             ans =[]
             for i in range(last-55,last+1,7):
                 ans.append(pw[lst[i:i+7]])
-
             if (sum(ans[0:8:2])*3 + sum(ans[1:8:2]))%10 == 0:
-                result = sum(ans[0:8:1])
+                result = sum(ans)
             else:
                 result =0
 
